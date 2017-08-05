@@ -5,8 +5,11 @@ import math
 
 
 def quadratic(a, b, c):
-    return (-b + math.sqrt(b * b - 4 * a * c)) / 2 / a, (
-        -b - math.sqrt(b * b - 4 * a * c)) / 2 / a
+    if b * b < 4 * a * c:
+        return ('无实数解')
+    else:
+        return (-b + math.sqrt(b * b - 4 * a * c)) / 2 / a, (
+            -b - math.sqrt(b * b - 4 * a * c)) / 2 / a
 
 
 # 测试:
